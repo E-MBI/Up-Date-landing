@@ -21,8 +21,8 @@ Open `js/app.js` if you want to modify or start building more functions.
 
  nav bar
   > ul
-  > > > li
-  > > > > a
+    > li
+       > a
 
 
 ##Sections
