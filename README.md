@@ -20,7 +20,7 @@ Open `js/app.js` if you want to modify or start building more functions.
 ## Header content
 
 nav bar
-  > > ul
+ ul
   > > > li
   > > > > a
 
