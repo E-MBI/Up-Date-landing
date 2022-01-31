@@ -21,17 +21,10 @@ Open `js/app.js` if you want to modify or start building more functions.
 
 nav bar
 
-<<<<<<< HEAD
-> > ul
-> >
-> > > li
-> > >
-> > > > a
-=======
   > > ul
   > > > li
   > > > > a
->>>>>>> c9cee5c0f8b24692b2b3f197a8efbdd0dc88e8de
+
 
 ##Sections
 
