@@ -21,10 +21,9 @@ Open `js/app.js` if you want to modify or start building more functions.
 
  nav bar
   > ul
-     > li
-      > > a
-
-
+  > li
+  > a
+    
 ##Sections
 
 when section inserview of screen user ,will light and his link is hight light .
