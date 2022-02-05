@@ -20,6 +20,7 @@ Open `js/app.js` if you want to modify or start building more functions.
 
 ## Header content
 
+<<<<<<< HEAD
 nav bar
 
 > > ul
@@ -28,6 +29,13 @@ nav bar
 > > >
 > > > > a
 
+=======
+ nav bar
+  > ul
+ > > li
+  >>> a
+    
+>>>>>>> eecb24eebef53fcfc6d445a712d46b372107241a
 ##Sections
 
 when section inserview of screen user ,will light and his link is hight light .
