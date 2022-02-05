@@ -1,4 +1,5 @@
 # Landing Page Project
+
 the landing page project is my first project in FWD With Udacity in professional web track .
 This project for a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.
 
@@ -21,23 +22,16 @@ Open `js/app.js` if you want to modify or start building more functions.
 
 nav bar
 
-<<<<<<< HEAD
 > > ul
 > >
 > > > li
 > > >
 > > > > a
-=======
-  > > ul
-  > > > li
-  > > > > a
->>>>>>> c9cee5c0f8b24692b2b3f197a8efbdd0dc88e8de
 
 ##Sections
 
 when section inserview of screen user ,will light and his link is hight light .
 
 ### this my code AND the online source that i learned from it:-
--[(https://developer.mozilla.org/en-US/)]
--[(https://www.w3schools.com/)]
--[(https://www.freecodecamp.org/)]
+
+-[(https://developer.mozilla.org/en-US/)] -[(https://www.w3schools.com/)] -[(https://www.freecodecamp.org/)]

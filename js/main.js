@@ -83,25 +83,9 @@ function scrooolling_sec() {
       // create var contains the  [data-nav] of section
       var SecDataNav = seeections[i].getAttribute("data_nav");
       // callBack The Function that light link his releated with his section
-      light_link_activate(SecDataNav);
-      // light_link_activate(SecDataNav);
     }
     // end forEach looping method
   }
-}
-// ============*******==function heighlight =======**********=========******========
-function light_link_activate(w) {
-  //create varialble that refered link a of his section on viewporte
-  var light__link = document.querySelectorAll("ul > li > a ");
-  // used forEach method to loop about every link and remove class active_link for him
-  light__link.forEach((li__a) => {
-    // remove class active_link for him
-    li__a.classList.remove("active_link");
-  });
-  // create variable that contain link he including data-link=section-num
-  var _Active_link = document.querySelector(` ul li a[data_link="${w}" ]`);
-  // after than add class active_link
-  _Active_link.classList.add("active_link");
 }
 
 /*in media query on screen small & medium the icon is menu
@@ -130,16 +114,3 @@ for (var i = 0; i < li_link.length; i++) {
     menu_ul.classList.add("ulNavclose");
   });
 }
-///srkadi
-const AA = document.querySelectorAll("ul li a ");
-///selected the element that contains link
-AA.forEach((e) => {
-  ///used forEch to add event for each one them
-  e.addEventListener("click", (el) => {
-    //selcte the element who is equal the elemne that in borwser view
-    el = document.querySelector("#" + el.getAttribute("data_link"));
-    ///used scrollIntoView to scrolling with smooth
-    el.scrollIntoView({ behavior: "smooth" });
-  });
-});
-///end fun
