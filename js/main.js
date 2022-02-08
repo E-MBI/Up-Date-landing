@@ -59,33 +59,51 @@ activation_link.forEach((elemeeent) => {
 // ===========================wehen user scroll the li a is heighlight ===================================
 //this function detected the section if into view or not  and add the active class into evrysection
 //and determined the section is inside viewport if founded it execute particular action::=>
-
+window.addEventListener("scroll", scrooolling_sec);
 // =======****************=======wehen user scroll the li a is heighlight =====*******======================
 // get element who active it
 // //when window scrolling ,the section that is insertview will light and it's link into navbar will light
-window.addEventListener("scroll", scrooolling_sec);
-// callback function that observe the section
 function scrooolling_sec() {
-  // local scope function
-  // Selecte all sections on page
-  var seeections = document.getElementsByTagName("section");
-  // after than apply forEach method over the Array of var (seeections)
-  for (let i = 0; i < seeections.length; i++) {
-    // used if condition to ensure status  section on screen of user if ture or false
+  //this function of scrolling to light section and callbackof function that light link of nav bar
+  //secleted all section =>
+  const seections = document.querySelectorAll("section");
+  //used the foreach to detected the section that who on window view or not
+  seections.forEach((sec) => {
+    //used if condtion to make sure if section on veiw port of the secreen of user or Not
     if (
-      // condition of if statment used getBoundingClientRect
-      //to determine Dimensions
-      seeections[i].getBoundingClientRect().top >= -70 &&
-      // if the top of section is greaterthan or equal >=(-45)
-      seeections[i].getBoundingClientRect().top <= 300
-      // if the top of section is lessthan or equal <=(-167)
+      //used getboundingrect to dertirmind the diamnations of section
+      sec.getBoundingClientRect().top >= -50 &&
+      //when section top -50px of y axis of header of page
+      sec.getBoundingClientRect().top <= 170
+      //and when section top 170px of y axis of header page and bottom of section
     ) {
-      // create var contains the  [data-nav] of section
-      var SecDataNav = seeections[i].getAttribute("data_nav");
-      // callBack The Function that light link his releated with his section
+      //exctued this block of code
+      //get section data_nav =>
+      var sec_DNav = sec.getAttribute("data_nav");
+      //after then addcolor to the section on port view of user screen to mark it by adding class of color ("active_link")
+      sec.classList.add("active_link");
+      //And After theeeeeen ==> callback the function that will active the link of nav bar that refered to the section
+      lighter_link(sec_DNav);
+      //use eles to remove ("active_link")class
+    } else {
+      //here!! remove the ("Active_link") class
+      sec.classList.remove("active_link");
     }
-    // end forEach looping method
-  }
+  });
+}
+//this Function that Active link into nav bar ==>
+function lighter_link(sec) {
+  //selecte the All links of nav bar
+  const ArrLinkNav = document.querySelectorAll("ul li a");
+  //using for loop =>To looping the array of links
+  for (let i = 0; i < ArrLinkNav.length; i++) {
+    //here ! removing the active class from the current element
+    ArrLinkNav[i].classList.remove("active_link");
+  } //end for
+  //here linked the section data_nva with the data_link of  his link ("a")
+  let linkActive = document.querySelector(` ul li a[data_link="${sec}"]`);
+  //and after then add the active class to the link of section that active on user screen
+  linkActive.classList.add("active_link");
 }
 
 /*in media query on screen small & medium the icon is menu
