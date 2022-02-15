@@ -138,24 +138,20 @@ nav > ul {
   }
   header > nav > #iconNav {
     display: block;
+    width: 0%;
+    height: 0%;
+    border: 17px solid transparent;
+    border-top: 25px solid #9e9e9ecc;
+    padding: 0;
+    margin-top: 17px;
+    margin-bottom: 10px;
     position: relative;
-    color: #222;
-    top: 0;
-    right: -88%;
-    padding: 18px;
-    font-size: 25px;
+    right: -87%;
+    transform: rotate(90deg);
     cursor: pointer;
+    transition: 0.5s;
   }
-  header > nav > .menu_i {
-    display: block;
-    color: rgb(61, 61, 61);
-    position: relative;
-    top: 0%;
-    right: -89%;
-    font-size: 30px;
-    padding: 20px 20px;
-    cursor: pointer;
-  }
+
   .ulNav {
     display: block;
     align-items: center;
@@ -192,6 +188,12 @@ nav > ul {
     color: #cc1 !important;
     transition: 0.5s ease-in-out 0.2s;
   }
+}
+/* style of arrow */
+.RotatArrow {
+  transform: rotate(0deg) !important;
+  transition: 0.5s !important;
+  border-top: 25px solid #037185 !important;
 }
 
 /* Header Styles */
@@ -285,9 +287,6 @@ section:nth-of-type(3n) .landing__container::after {
   transition: ease 0.5s all;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 section:nth-of-type(3n + 1) .landing__container::after {
   content: "";
   background: rgb(255, 255, 255);
